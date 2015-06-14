@@ -4,6 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="underscore-master/underscore-min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         
     </head>
@@ -11,9 +12,10 @@
     <body>
        
         <div class="wrapper">
+            
             <div class="box" id="n1"></div>
             
-            <div class="box" id="n2">
+            <div class="box" id="n2" >
                 <div class="title2">21ST CENTURY STORYTELLING</div>
                 <div class="title2" style="font-size:30px; margin-top:15px;">Professional development workshops in crossmedia performance</div>
             </div>
@@ -176,73 +178,64 @@ www.thebuildersassociation.org<br><br>
             
             <div class="box" id="n22" style="background-color:transparent; height:10%"></div>
             
+            <div id="scrollPurpose" style="width:100%; top:0px; position:absolute"></div>
         </div>
         
         
         
         <div class="title">THE BUILDERS ASSOCIATION</div>
+        
+        
+        
         <script>
             
             var childNum;
             var prevScroll=0;
+            var position = new Array();
             
             $(document).ready(function()
             {
                 var i;
                 childNum = $(".box").length;
-                var docLength = $(".box#n1").height();
-                console.log(childNum);
+                var docHeight = $(".box#n1").height();
+              //  console.log(childNum);
+                position[1] = 0;
+                $(".box#n1").css("top","0px");
                 for(i=2; i<=childNum; i++)
                 {
+                    
                     var divHeight = $(".box#n"+(i-1)).height();
-                    var y = $(".box#n"+(i-1)).position().top;
+                    var y = position[i-1];
                     $(".box#n"+i).css("top",y+divHeight+"px");
-                    docLength += $(".box#n"+i).height();
+                   position[i] = y+divHeight;
+                    docHeight += $(".box#n"+i).height();
+                 //   console.log(position[i]);
                 }
+                $("#scrollPurpose").css("height",docHeight+"px");
               //  $("#forScroll").css({"width":"100%","height":docLength+"px","background-color":"magenta"});
                 
             });
             
             
-            
-            
-            var currentNum =1;
-            
-            $(".wrapper").scroll(function()
-            {
+            var thisHappens = _.throttle(function(){
+                
                 var y = $(".box#n"+(currentNum+1)).position().top;
                 var containerHeight = $(".wrapper").height();
-                    
-                if(y<=20)
-                    currentNum++;
-                else if(y>=containerHeight+20)
-                    currentNum--;
-                
+                console.log(currentNum+" "+y);
                 
                 if(currentNum >= childNum)
                     currentNum--;
                 
-                
-                for(i=1; i<=currentNum; i++)
-                    $(".box#n"+i).css("top",$(".wrapper").scrollTop()+"px");
-                for(i=currentNum+1; i<=childNum; i++)
+                if(y<=30)
                 {
-                    var j;
-                    var prevLength=0;
-                    for(j=1; j<i; j++)
-                        prevLength+=$(".box#n"+j).height();
-                    $(".box#n"+i).css("top",prevLength);
+                    currentNum++;
+                    $(".box#n"+currentNum).css({"position":"fixed","top":"0px"});
                 }
-                    
-                
-                $(".box#n1").css("top",$(".wrapper").scrollTop()+"px");
-                
-                
-                
-                
-                
-               // console.log(currentNum);
-                
+                else if(y>=containerHeight+30)
+                {
+                    $(".box#n"+currentNum).css({"position":"absolute","top":position[currentNum]+"px"});
+                    currentNum--;
+                }
                 
                 var n=$(this).scrollTop();
                 if(n>50)
@@ -253,8 +246,12 @@ www.thebuildersassociation.org<br><br>
                 {
                     $(".title").css({"font-size":"50px","top":"43%"});
                 }
-            });
+                
+            },10);
             
+            var currentNum =1;
+  
+            $(".wrapper").scroll(thisHappens);
             
                 
         </script>
