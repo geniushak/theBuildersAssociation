@@ -2,17 +2,20 @@
     
 html {width: 100%; height: 100%; padding: 0px; margin: 0px;}
 body {width: 100%; height: 100%; padding: 0px; margin: 0px;overflow: scroll}
-video {height:100%; width: auto;}
-
-
+video { width: auto;}
 
 .box {
     width: 100%; 
-    height: 100%; 
+    height: 100%;
     background-color:transparent; 
     position: absolute;
     overflow: hidden;
 }
+
+.box:hover{
+    cursor: pointer;
+}
+    
 .veil {
     background-color: black; 
     opacity: 0; 
@@ -149,17 +152,16 @@ video {height:100%; width: auto;}
 }
 .tldrWrapper {
     width: 94%;
-    height: 94%;
     margin-left: 3%;
     margin-right: 3%;
     margin-top:2%;
     margin-bottom:2%;
     background-color: white;
+    overflow: hidden;
 }
 
 .tldrColumn{
     width:46%;
-    height:94%;
     padding:2%;
     float:left;
 }
