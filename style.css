@@ -46,6 +46,7 @@ a {color:black}
     width:90%; 
     margin-left:5%;
     margin-top: 5%;
+    line-height: 3.3vw;
 }
 .quote {
     font-weight:700; 
