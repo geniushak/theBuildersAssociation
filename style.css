@@ -241,7 +241,7 @@ a {color:black}
     #n3 .title2{text-align: center}
     #n11 .title2{text-align: center; font-size:4vw}
     .column {height:auto;width: 100%; background-color: black !important}
-    .text {font-size:7vw}
+    .text {font-size:7vw; line-height: inherit;}
     .text#y{color:rgb(255,255,0);}
     .text#r{color:rgb(255,63,0);}
     .text#g{color:rgb(0,255,195);}
