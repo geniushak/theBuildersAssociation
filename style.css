@@ -235,11 +235,11 @@ a {color:black}
     -ms-border-radius:0; border: 0px; position: relative}
     .halfPageTitle{font-size:10vw; line-height: 10.5vw; margin-top: 350px !important; position: relative; text-align: left}
     .box {height: auto; padding-bottom: 10px; background-color: black; position: relative; top:auto; cursor: inherit !important}
-    #n1,#n5,#n9,#n13,#n21,#n25,#n33,#n37,#n45 {display: none}
-    #n3{height: 100% !important}
-    #n11{position: fixed; top:10px; background-color: transparent; z-index: 999999}
-    #n3 .title2{text-align: center}
-    #n11 .title2{text-align: center; font-size:4vw}
+    #n1,#n3,#n7,#n11,#n19,#n23,#n31,#n35,#n41 {display: none}
+    #n1{height: 100% !important}
+    #n09{position: fixed; top:10px; background-color: transparent; z-index: 999999}
+    #n1 .title2{text-align: center}
+    #n09 .title2{text-align: center; font-size:4vw}
     .column {height:auto;width: 100%; background-color: black !important}
     .text {font-size:7vw; line-height: inherit;}
     .text#y{color:rgb(255,255,0);}
@@ -268,11 +268,11 @@ a {color:black}
     -ms-border-radius:0; border: 0px; position: relative}
     .halfPageTitle{font-size:10vw; line-height: 10.5vw; margin-top: 350px !important; position: relative; text-align: left}
     .box {height: auto; padding-bottom: 20px; background-color: black; position: relative; top:auto; cursor: inherit !important}
-    #n1,#n5,#n9,#n13,#n21,#n25,#n33,#n37,#n45 {display: none}
-    #n3{height: 100% !important}
-    #n11{position: fixed; top:10px; background-color: transparent; z-index: 999999}
-    #n3 .title2{text-align: center}
-    #n11 .title2{text-align: center; font-size:4vw}
+    #n1,#n3,#n7,#n11,#n19,#n23,#n31,#n35,#n43 {display: none}
+    #n1{height: 100% !important}
+    #n09{position: fixed; top:10px; background-color: transparent; z-index: 999999}
+    #n1 .title2{text-align: center}
+    #n09 .title2{text-align: center; font-size:4vw}
     .column {height:auto;width: 100%; background-color: black !important}
     .text {font-size:7vw}
     .text#y{color:rgb(255,255,0);}
