@@ -31,8 +31,9 @@ a {color:black}
     font-weight:900; 
     font-size: 7.4vw; 
     width:70%; 
-    top:37.5%; 
-    text-align: center; 
+    top:50%; 
+    text-align: center;
+    margin-top: -7vw; 
     margin-left: 15%; 
     margin-right: 15%;
     position:absolute;
@@ -56,10 +57,10 @@ a {color:black}
     margin-left:10%;
 }
 .halfPageTitle {
+    top: 50%;
     font-family: "dia"; 
     font-weight:900; 
-    font-size: 4vw; 
-    margin-top:35%;  
+    font-size: 4vw;  
     text-align:center; 
     line-height: 3.8vw;
 }
@@ -84,9 +85,10 @@ a {color:black}
     height:36vw;
     background-color: transparent;
     border: 1.6vw solid white;
-    top:18%;
+    top:50%;
     left:50%;
     margin-left: -20vw;
+    margin-top: -20vw;
     border-radius: 50%;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
@@ -171,8 +173,8 @@ a {color:black}
 }
 
 .tldrColumn{
-    margin-left: 30%;
-    width:70%;
+    margin-left: 24%;
+    width:76%;
     float:left;
 }
 
@@ -182,12 +184,35 @@ a {color:black}
     font-family: "dia";
     font-size: 1.6vw;
     line-height: 1.8vw;
+    text-indent: 4.8vw;
+    /*letter-spacing: .01vw;*/
 }
 
 .tldrTitle{
-    font-size:1.6vw;
-    line-height: 1.75vw;
+    width:100%;
+    font-family: "dia";
+    font-size: 1.6vw;
+    line-height: 3.6vw;
     font-weight: 800;
+    text-indent: 0;
+    padding-top: 2vw;
+}
+
+.tldrSubTitle{
+    width:100%;
+    font-family: "dia";
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+    text-indent: 0;
+}
+
+.tldrSubTitleSpecial{
+    width:100%;
+    font-family: "dia";
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+    text-indent: 0;
+    margin-top: 0vw;
 }
 
 .tldrNav{
@@ -195,15 +220,15 @@ a {color:black}
     position: fixed;
     -webkit-transform:translateZ(0);
     left: 3%;
-    top: 5%;
 }
 
 .tldrNavList{
     font-family: "dia";
     font-size:1.6vw;
-    line-height: 1.7vw;
+    line-height: 1.8vw;
     font-weight: 800;
-    margin-bottom: 4.5%;
+    margin-bottom: .9vw;
+
 }
     
 .tldrNavList:hover{
@@ -320,17 +345,19 @@ a {color:black}
 @media print{
 
     * {margin: 0 !important; padding: 0 !important;}
-    @page { size:auto; margin-top: 20mm;}
+    @page { size:auto; margin-top: 10mm;}
     html, body{height: 100%;}
     .tldrNav{display: none}
-    .body { font-size: 12pt; font-family:"dia"}
+    .body { font-size: 12pt; font-family:"dia"; orphans: 2}
     .box>div {display: none}
-    .tldrColumn{width:46%; height:96%;padding:10pt;float:left;}
+    .tldrColumn{width:48%; height:96%; padding:10pt; float:left;}
     .cropMarks {display:none}
     .tldrBigWrapper{height: 100%; width:100%}
     .tldrWrapper{height: 100%; width:100%; margin-top: 5cm;}
-    .tldrTitle{font-size: 8.7pt; line-height: 11pt; letter-spacing: 0.07pt; font-family: "dia"; font-weight: 800; margin-bottom: 2mm; float:none}
-    .tldrBox{font-size: 8.7pt; line-height: 11pt; letter-spacing: 0.07pt;  font-family:"dia"; margin-bottom: 2mm; float: none}
+    .tldrTitle{font-size: 9.5pt; line-height: 22pt; letter-spacing: 0.01pt; font-family: "dia"; font-weight: 800; float:none}
+    .tldrSubTitle{font-size: 9.5pt; line-height: 11pt; letter-spacing: 0.01pt; font-family: "dia"; float:none;}
+    .tldrSubTitleSpecial{font-size: 9.5pt; line-height: 11pt; letter-spacing: 0.01pt; font-family: "dia"; float:none;}
+    .tldrBox{font-size: 9.5pt; line-height: 11pt; letter-spacing: 0.01pt;  font-family:"dia"; text-indent: 22pt; float: none}
     .tldrEmpty{display: none}
     video {display: none}
     img {display: none}
