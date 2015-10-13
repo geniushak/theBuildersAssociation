@@ -47,12 +47,13 @@ a {color:black}
     width:90%; 
     margin-left:5%;
     margin-top: 5%;
-    line-height: 3.3vw;
+    line-height: 3.2vw;
+    letter-spacing: -.04vw;
 }
 .quote {
     font-weight:700; 
-    font-size:5.35vw; 
-    line-height:5.4vw; 
+    font-size:5.2vw; 
+    line-height:5.35vw; 
     width:80%; 
     margin-left:10%;
 }
@@ -185,7 +186,7 @@ a {color:black}
     font-size: 1.6vw;
     line-height: 1.8vw;
     text-indent: 4.8vw;
-    /*letter-spacing: .01vw;*/
+    letter-spacing: -.01vw;
 }
 
 .tldrTitle{
