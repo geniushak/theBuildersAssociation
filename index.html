@@ -17,10 +17,8 @@ url('supervision_09.jpg')"></div>
             
         
             <div id="scrollPurpose" style="width:100%; top:0px; position:absolute"></div>
-<!--            <div class="box" id="n1" style="background-image:url('JL_2010_6.jpg'); background-position:center; top:0px; position:fixed"></div>-->
             <div class="box" id="n1" style="overflow:hidden; position:fixed;">
                 <video preload="auto" loop="loop" autoplay="autoplay" muted><source src="hd.mp4" type="video/mp4"><source src="hd.ogv" type="video/ogv"><source src="hd.ogg" type="video/ogg"></video> 
-                <!-- <div class="veil"></div> -->
                 <div class="outline"></div>
                <div class="title2" style="color:white;">21st Century Storytelling</div>
             </div>
@@ -221,10 +219,7 @@ url('supervision_09.jpg')"></div>
             <div class="box" id="n48" style="background-color:transparent; height:10%"></div>
             
             
-        
-<!--        <div class="arrow">[<a id="arrowT" style="font-family:dia;font-weight:900;font-size:5.5vw">SCROLL</a>[</div>-->
-            
-        <a href="#"><div id="dArrow" style="position:fixed; bottom:0px; left:48%; height:80px; width: 80px;background-image:url('dArrow.svg');background-size:contain; -webkit-transition:all 0.2s"></div></a>
+        <a href="#"><div id="dArrow"></div></a>
         
         <div class="readMoreWrapper"> 
             <div class="readMore"><img src="Fonts_for_Builders/ModernPictogramsPro/align_left.svg" style="margin-top:-5px; margin-left:-2.5px; height:55px;"></div>
@@ -435,7 +430,7 @@ url('supervision_09.jpg')"></div>
             function loopTransition()
             {
                 $("#readMoreText").toggleClass("s"+counter.toString());
-                var t = (-8*(counter-1))+5;
+                var t = (-8*(counter+1))+5;
                 $("#dArrow").css("bottom",t+"px");
                 counter++;
                 if(counter > 2)
@@ -447,8 +442,6 @@ url('supervision_09.jpg')"></div>
             {
                 childNum = $(".box").length;
                
-               /* if(md.phone() == null && md.tablet() == null)
-                     alert("!!!!!!");*/
                 
                 if($(window).width()>=770 && md.phone() == null && md.tablet() == null)
                 {
