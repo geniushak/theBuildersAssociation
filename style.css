@@ -271,8 +271,7 @@ a {color:black}
     a {color:white}
 }
 
-@media only screen and (max-device-width: 1024px) 
-                and (orientation: landscape) {
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
     
     img, video{display: none}
     .title {height: 10px; top:40%;}
